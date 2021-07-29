@@ -5,7 +5,7 @@ release:
   extra_files:
     - glob: ./bom.json
   github:
-    owner: securego
+    owner: daemon1024
     name: gosec
 
 builds:
