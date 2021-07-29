@@ -7,11 +7,16 @@ inputs:
     description: 'Arguments for gosec'
     required: true
     default: '-h'
+  working-directory:
+    description: "Current working directory, default is project root"
+    required: false
+    default:  '.'
 
 runs:
     using: 'docker'
-    image: 'docker://securego/gosec'
+    image: 'Dockerfile'
     args:
+      - ${{ inputs.working-directory }}
       - ${{ inputs.args }}
 
 branding:
